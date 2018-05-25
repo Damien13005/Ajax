@@ -1,0 +1,31 @@
+  <caption>Mailing</caption>
+
+
+ <table style="width:50%">
+<thead>
+  
+
+
+  <tr>
+    <th>list</th>
+    <th>contenu</th>
+  </tr>
+   
+
+    </thead>
+
+  <tbody>
+  
+    <% @email.each do |obj| %>
+  <tr> 
+    <td> <%= obj.object %></td> </tr>
+    <tr> 
+
+    <%= link_to 'destroy', obj, method: :delete, data: { confirm: 'Are you sure?' },
+         :remote => true, :class => 'delete_email' %>
+  </tr>
+   <% end %> 
+
+</tbody>
+</table> 
+
